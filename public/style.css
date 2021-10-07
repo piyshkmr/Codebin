@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+:root {
+  --bg: #002b36;
+  --color: #93a1a1;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+}
+
+body {
+  background-color: var(--bg);
+  padding: 0;
+  margin: 0;
+}
+
+.number {
+  text-align: end;
+}
+
+.line-numbers {
+  color: var(--color);
+  font-weight: bold;
+  user-select: none;
+}
+
+.container {
+  padding: 1.5rem;
+  font-size: 1rem;
+  display: flex;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+#document {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#text {
+  margin-left: 14px;
+  width: 100%;
+  min-height: 90vh;
+  background-color: var(--bg);
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+#menu {
+  text-align: left;
+  background-color: red;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 12rem;
+  padding: 1rem;
+  color: #fff;
+  background-color: var(--bg);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  user-select: none;
+  transition: all 500ms linear;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#logo {
+  padding: 0 14px;
+}
+
+#menu .btn {
+  background-color: var(--bg);
+  color: #fff;
+  padding: 8px 14px;
+  outline: none;
+  border: none;
+  display: block;
+  cursor: pointer;
+}
+
+#menu .btn:hover {
+  color: var(--color);
+}
+
+#menu .btn:disabled {
+  color: var(--color);
+  cursor: not-allowed;
+}
+
+.error-page {
+  text-align: center;
+  color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.error-page h1 {
+  font-size: 6rem;
+  margin-bottom: 0;
+}
+
+.error-page p {
+  font-size: 2rem;
+}
+
+.error-btn {
+  padding: 1rem 2rem;
+  background-color: var(--color);
+  color: var(--bg);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.hide {
+  right: -200px !important;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  left: -35px;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--bg);
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}

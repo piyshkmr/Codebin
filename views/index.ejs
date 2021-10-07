@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codebin</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/solarized-dark.min.css"
+      integrity="sha512-JPpsArcPmVD/lHCCuZeG6Kx4x2qURRXHXxKYaXYJiKEKaoLOcXKDYqQ4jSeauXbk+U6uZ1UzrGO85y+lpys0Og=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="line-numbers">
+        <% for( let i = 0; i < document.text.split("\n").length; i++ ) { %>
+        <div class="number"><%= i +1 %></div>
+        <% } %>
+      </div>
+      <pre><code  id="document"><%= document.text %></code></pre>
+    </div>
+
+    <%- include ("partials/menu",{id:document.id}) %>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"
+      integrity="sha512-MinqHeqca99q5bWxFNQEQpplMBFiUNrEwuuDj2rCSh1DgeeTXUgvgYIHZ1puBS9IKBkdfLMSk/ZWVDasa3Y/2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>

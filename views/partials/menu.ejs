@@ -1,0 +1,14 @@
+<div id="menu" class="hide">
+  <button class="close-btn" type="button" onclick="toggleMenu()">
+    &#8678;
+  </button>
+  <a href="/"><h3 id="logo">Codebin</h3></a>
+  <a href="/new" class="btn" role="button">New</a>
+  <button type="submit" <% if (!locals.showSave) { %>
+    <%= "disabled" %> <% } %> class="btn">Save
+  </button>
+
+  <% if (locals.id) { %>
+  <a href="/duplicate/<%=id%>" class="btn" role="button">Duplicate</a>
+  <% } %>
+</div>

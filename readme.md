@@ -2,6 +2,8 @@
 
 Codebin is a place where you can paste your code and save it and then via link you can share your code to others and also you are able to duplicate others code and edit it and make your own version
 
+link - https://codebin-web.herokuapp.com/
+
 ## Features
 
 - paste your code and save it
